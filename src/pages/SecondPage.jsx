@@ -1,57 +1,45 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 import React from "react";
+import "./Home.css";
 
 export function SecondPage(props) {
   return (
-    <React.Fragment>
+    <div style={{ height: "100vh", padding: "50px 0" }}>
       <CssBaseline />
-      <Container maxWidth="xl" sx={{ margin: "20px 20px" }}>
-        {/* Navbar */}
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
+      <div
+        style={{
+          padding: "0 20px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "inherit",
+          backdropFilter: "10px",
+          opacity: 0.6,
+        }}
+        className="backgroundImg"
+      >
+        <Box sx={{ backgroundColor: "#ccc" }}>
           <Box
             sx={{
-              display: "flex",
-              gap: "10px",
+              fontWeight: "bolder",
+              opacity: 1,
+              padding: "20px",
+              border: "2px solid black",
             }}
           >
             <Typography
-              sx={{ letterSpacing: "10px", marginRight: "20px" }}
-              variant="h5"
+              variant="h2"
+              sx={{ color: "lightsalmon", fontWeight: 900 }}
             >
-              AI.GEN
+              Create,customize,and publish your
             </Typography>
-            <Typography variant="h7">Features</Typography>
-            <Typography variant="h7">Roadmap</Typography>
-            <Typography variant="h7">Tokenomics</Typography>
-          </Box>
-          <Box sx={{ display: "flex", gap: "10px" }}>
-            <Button variant="contained" color="inherit">
-              Whitepaper
-            </Button>
-            <Button variant="contained" color="secondary">
-              Get Started
-            </Button>
+            <Typography variant="h2">
+              digital persona to life effortlessly.
+            </Typography>
           </Box>
         </Box>
-        <hr></hr>
-        {/* End of Navbar */}
-
-        <Box>
-          <Typography variant="h4" sx={{ color: "lightsalmon" }}>
-            Create,customize,and publish your
-          </Typography>
-          <Typography variant="h4">
-            digital persona to life effortlessly.
-          </Typography>
-        </Box>
-      </Container>
-      ;
-    </React.Fragment>
+      </div>
+    </div>
   );
 }

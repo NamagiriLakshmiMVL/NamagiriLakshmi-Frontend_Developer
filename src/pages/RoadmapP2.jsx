@@ -13,17 +13,28 @@ export function RoadmapP2(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth="xl" sx={{ margin: "20px 0px" }}>
+      <div sx={{ margin: "200px 0px", width: "100%" }}>
         <Box //parent box
           sx={{ display: "flex", justifyContent: "space-around" }}
         >
           {/* Phase 1 */}
-          <Box sx={{ display: "flex", marginTop: "100px" }}>
+          <Box
+            sx={{
+              display: "flex",
+              marginTop: "100px",
+              flexDirection: "column",
+            }}
+          >
             <Box>
-              <Typography varient="h4">PHASE 2</Typography>
+              <Typography variant="h3">PHASE 2</Typography>
             </Box>
             <List
-              sx={{ listStyleType: "disc", marginTop: "80px", width: "480px" }}
+              sx={{
+                listStyleType: "disc",
+                marginTop: "80px",
+                width: "480px",
+                fontSize: "20px",
+              }}
             >
               <ListItem sx={{ display: "list-item" }}>
                 Horizen dai dai harmony dogecoin waves nexo.
@@ -54,7 +65,7 @@ export function RoadmapP2(props) {
             alt="AI"
           />
         </Box>
-      </Container>
+      </div>
     </React.Fragment>
   );
 }

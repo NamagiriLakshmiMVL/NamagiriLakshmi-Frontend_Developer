@@ -1,4 +1,11 @@
-import { Box, Button, Container, CssBaseline, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Chip,
+  Container,
+  CssBaseline,
+  Typography,
+} from "@mui/material";
 import React from "react";
 
 export function BoxPage(props) {
@@ -30,56 +37,58 @@ export function BoxPage(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth="xl" sx={{ margin: "20px 0px" }}>
-        {/* Navbar */}
-        <Box
-          sx={{
+      <div sx={{ margin: "20px 0px", width: "100vw" }}>
+        <div
+          style={{
             display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              gap: "10px",
-            }}
-          >
-            <Typography
-              sx={{ letterSpacing: "10px", marginRight: "20px" }}
-              variant="h5"
-            >
-              AI.GEN
-            </Typography>
-            <Typography variant="h7">Features</Typography>
-            <Typography variant="h7">Roadmap</Typography>
-            <Typography variant="h7">Tokenomics</Typography>
-          </Box>
-          <Box sx={{ display: "flex", gap: "10px" }}>
-            <Button variant="contained" color="inherit">
-              Whitepaper
-            </Button>
-            <Button variant="contained" color="secondary">
-              Get Started
-            </Button>
-          </Box>
-        </Box>
-        <hr></hr>
-        {/* End of Navbar */}
-        <Box
-          sx={{
-            display: "flex",
-            flexWrap: "wrap",
             gap: "10px",
             marginTop: "250px",
+            width: "100vw",
+            overflow: "scroll",
           }}
         >
           {arr.map((val) => (
-            <Button variant="contained" size="large">
-              {val}
-            </Button>
+            <Chip
+              style={{
+                width: "300px",
+                fontSize: 25,
+                textTransform: "capitalize",
+                padding: "30px 35px",
+                border: "1px solid white",
+                borderRadius: "10px",
+                overflow: "unset",
+                color: "white",
+              }}
+              label={val}
+            />
           ))}
-        </Box>
-      </Container>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            gap: "10px",
+            marginTop: "20px",
+            width: "100vw",
+            overflow: "scroll",
+          }}
+        >
+          {arr.reverse().map((val) => (
+            <Chip
+              style={{
+                width: "300px",
+                fontSize: 25,
+                textTransform: "capitalize",
+                padding: "30px 35px",
+                border: "1px solid white",
+                borderRadius: "10px",
+                overflow: "unset",
+                color: "white",
+              }}
+              label={val}
+            />
+          ))}
+        </div>
+      </div>
     </React.Fragment>
   );
 }

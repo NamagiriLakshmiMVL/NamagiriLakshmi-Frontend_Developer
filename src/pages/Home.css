@@ -1,0 +1,14 @@
+.headerContainerText {
+  color: white;
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.backgroundImg {
+  background-image: url("./../images/people.jpg");
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: center;
+}
