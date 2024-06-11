@@ -9,6 +9,7 @@ import { RoadmapP1 } from "./pages/RoadmapP1";
 import { RoadmapP2 } from "./pages/RoadmapP2";
 import { RoadmapP3 } from "./pages/RoadmapP3";
 import { FinalPage } from "./pages/FinalPage";
+import { ChartPage } from "./pages/ChartPage";
 
 function App() {
   return (
@@ -18,11 +19,11 @@ function App() {
       <BriefImage1 />
       <BoxPage />
       <ImageHalf />
+      <ChartPage />
       <RoadmapP1 />
       <RoadmapP2 />
       <RoadmapP3 />
       <FinalPage />
-      {/* <AllComponents /> */}
     </div>
   );
 }
